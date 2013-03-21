@@ -22,13 +22,15 @@ ImportEmailContacts::Application.configure do
   config.action_mailer.default :charset => "utf-8"
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.sendgrid.net",
-    port: 25,
-    domain: "example.com",
-    authentication: "plain",
-    user_name: ENV["SENDGRID_USERNAME"],
-    password: ENV["SENDGRID_PASSWORD"]
+     :address => "smtp.gmail.com",
+     :port => 587,
+     :domain => 'localhost:3000',
+     :user_name => 'perfecthm56@gmail.com',
+     :password => 'dhjfqystjf56',
+     :authentication => 'plain',
+     :enable_starttls_auto => true
   }
+
 
 
 
@@ -50,4 +52,5 @@ ImportEmailContacts::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
 end

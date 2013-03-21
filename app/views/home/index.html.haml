@@ -1,4 +1,27 @@
+.row#content-fist-row
+	.container
+		.row#invite-by-email
+			%h4 Invite by email
+			%button.btn.btn-primary Invite your email contacts
+			or enter email addresses here:
+			%input{type:"text", placeholder:"Add names or emails"}
+			%button.btn Send invites
+
+
+#openModal.modalDialog
+	%div
+		%a.close{href:"", title: "Close"} X
+		.row#modal-first-row
+			%h4
+				Which contacts would you like to invite?
+				
+			= link_to home_gmail_contacts_path do
+				%button.btn.btn-large Gmail
+
+			%button.btn.btn-large YaHoo!
+			%button.btn.btn-large Hotmail
+
 %h3 Home
 - @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+	%p
+		User: #{link_to user.name, user}

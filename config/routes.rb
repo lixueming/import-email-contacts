@@ -5,4 +5,6 @@ ImportEmailContacts::Application.routes.draw do
   root :to => "home#index"
   devise_for :users
   resources :users
+
+  get "home/gmail_contacts"
 end
